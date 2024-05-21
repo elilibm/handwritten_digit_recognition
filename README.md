@@ -71,4 +71,12 @@ Computes the average loss over the dataset by dividng counter by total number of
 Prints the test results including the average loss to 4 decimal places, the number of correct predictions (counter), and calculates and prints percentage accuracy by dividing correct predictions by total ones.
 
 ### Step 9: Run the training and testing over multpile epochs. 
-Create a for loop that iterates through each epoch 10 times. Calls the train funtion over each epoch and calls test to evaluate model after each epoch. Too many epoch's can lead to overfitting so experiment with range to determine the optimal model accuracy. 
+Create a for loop that iterates through each epoch 10 times. Calls the train funtion over each epoch and calls test to evaluate model after each epoch. Too many epoch's can lead to overfitting so experiment with range to determine the optimal model accuracy.
+
+### Step 10: Dispaying 
+Import matplotlib which is a plotting library used to visualize data and model in evaluation mode. 
+
+Selects the 9th sample from the test dataset and adds a batch dimension to the tensor [1,28,28] -> [1,1,28,28] since the model is used to an additional dimension for the batch size (from training). Moves this tensor to the correct hardware. Then passes the tensor through the model to get the predictions. Finds the max value, looks in dim 1 for class and converts value to python scalar. Prints prediction. 
+
+Removes the batch dimension added (not needed to display image) and converts to NumPy array which is used to display the image in grayscale. Then renders and shows the plot. 
+
