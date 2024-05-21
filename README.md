@@ -1,7 +1,8 @@
 # handwritten_digit_recognition
 Trained a neural network to classify handwritten digits using PyTorch.
 
-# here is how it works ...
+
+# Architecture & Flow
 
 ### Step 1: Importing the dependencies.
 Import torch and torchvision. 
